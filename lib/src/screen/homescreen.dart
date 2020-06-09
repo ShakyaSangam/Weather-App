@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<WheatherModel> fetchApi() async {
     var response = await http.get(
-        "https://api.openweathermap.org/data/2.5/weather?q=${controller == null ? "Dharan" : controller}&APPID=4fc204a3175fc36ff3b7882339f312b4");
+        "https://api.openweathermap.org/data/2.5/weather?q=${controller == null ? "Dharan" : controller}&APPID=YOUR_APP_ID");
     // print(response.body);
     var dec = json.decode(response.body);
     var model = WheatherModel.fromJson(dec['main']);
